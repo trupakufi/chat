@@ -5,6 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chat Mario varela</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+    integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg=="
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"
+    integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA=="
+    crossorigin="anonymous"
+  ></script>
+  <body>
+    <form id="chat">
+      <input type="text" name="username" placeholder=" Digite seu Usuario " />
+      <div class="messages"></div>
+      <input type="text" name="message" placeholder="Digite a sua mensagem" />
+      <button type="submit">Enviar</button>
+    </form>
+    <script type="text/javascript">
+      var socket = io("http://localhost:3000/");
+
+      $("#chat").submit(function (event) {
+        event.preventDefault();
+
+        var author = $("input[name=username]").val();
+        var message = $("input[name=message]").val();
+
+        if (author.length && message.length) {
+          var messageObject = {
+            author: author,
+            message: message,
+          };
+
+          socket.emit("sendMessage", messageObject);
+        }
+      });
+    </script>
+  </body>
 </html>
