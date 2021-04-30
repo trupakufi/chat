@@ -37,6 +37,16 @@
         );
       }
 
+      socket.on("previousMessage", function (messages) {
+        for (message of messages) {
+          renderMessage(message);
+        }
+      });
+
+      socket.on("receivedMessage", function (message) {
+        renderMessage(message);
+      });
+
       $("#chat").submit(function (event) {
         event.preventDefault();
 
