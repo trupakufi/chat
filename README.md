@@ -1,4 +1,3 @@
-
 # Chatting With Web Sockets and NodeJS & HTML basic
 
 Um Chat para comunicação em tempo real.!
@@ -9,8 +8,12 @@ Para contribuir, Analisar ou Melhorar o Codigo, Faça um FOrk do Respositório.
 
 $ git clone https://github.com/mariovarela99/chat #CLonando o Projecto.!
 $ node server.js #Para rodar o arquivo server.!
-# Em seguida abra o navegdaor na porta 3000, Ou seja http://localhost:3000/ 
+# Em seguida abra o navegdaor na porta 3000, Ou seja http://localhost:3000/
 
 ```
 
 E depois tens tudo para ser Feliz Comigo.!
+
+## Image Preview - Chat Funcionando
+
+![Video Showing The Chat Funcionnig](./assets/image-show.gif)
