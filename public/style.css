@@ -14,6 +14,7 @@ body {
 
 #chat {
   height: 100%;
+  padding: 10px;
   display: flex;
   align-items: center;
   flex-direction: column;
