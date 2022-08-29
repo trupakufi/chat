@@ -1,5 +1,6 @@
 
-# chat
+# Chatting With Web Sockets and NodeJS & HTML basic
+
 Um Chat para comunicação em tempo real.!
 
 Para contribuir, Analisar ou Melhorar o Codigo, Faça um FOrk do Respositório.
