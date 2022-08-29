@@ -12,7 +12,4 @@ $ node server.js #Para rodar o arquivo server.!
 
 ```
 
-E depois tens tudo para ser Feliz Comgo.!
-
-Uploading Video_1619828983.mp4…
-
+E depois tens tudo para ser Feliz Comigo.!
